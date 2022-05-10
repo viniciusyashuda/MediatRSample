@@ -2,8 +2,9 @@
 using System.Linq;
 using System.Threading.Tasks;
 using MediatRSample.Application.Models;
+using MediatRSample.Domain.Application.Interfaces;
 
-namespace MediatRSample.Repositories
+namespace MediatRSample.Infraestructure.Repositories
 {
     public class Repository : IRepository<Person>
     {

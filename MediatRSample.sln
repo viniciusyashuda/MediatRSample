@@ -7,6 +7,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatRSample", "MediatRSam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonTest", "PersonTest\PersonTest.csproj", "{A909D285-4ABE-4C71-B6FF-63B0455FB9C5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1- Presentation", "1- Presentation", "{73D0E0BF-DCF1-445E-B8B4-8F67D34C1866}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2- Domain", "2- Domain", "{CC7F683E-FCB5-4898-B630-D1E64B54F878}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Infraestructure", "3- Infraestructure", "{DAAF65CE-7CBA-40EC-9647-F8989DA905C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4- CrossCutting", "4- CrossCutting", "{FF742C3A-D1BD-4647-99B1-3241821DD9C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5- Test", "5- Test", "{EFFE8F19-2202-451C-8A71-31A930B2BFC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatRSample.Domain", "MediatRSample.Domain\MediatRSample.Domain.csproj", "{D0E6C91A-36D8-45FF-A560-4326071DCEBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatRSample.Infraestructure", "MediatRSample.Infrestructure\MediatRSample.Infraestructure.csproj", "{DE7E5681-5DBD-46BE-BAB3-E3DBD59760D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +35,23 @@ Global
 		{A909D285-4ABE-4C71-B6FF-63B0455FB9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A909D285-4ABE-4C71-B6FF-63B0455FB9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A909D285-4ABE-4C71-B6FF-63B0455FB9C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E6C91A-36D8-45FF-A560-4326071DCEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E6C91A-36D8-45FF-A560-4326071DCEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E6C91A-36D8-45FF-A560-4326071DCEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E6C91A-36D8-45FF-A560-4326071DCEBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7E5681-5DBD-46BE-BAB3-E3DBD59760D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7E5681-5DBD-46BE-BAB3-E3DBD59760D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7E5681-5DBD-46BE-BAB3-E3DBD59760D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7E5681-5DBD-46BE-BAB3-E3DBD59760D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9FF82B3B-20CA-4223-AF67-3439814ECCC1} = {73D0E0BF-DCF1-445E-B8B4-8F67D34C1866}
+		{A909D285-4ABE-4C71-B6FF-63B0455FB9C5} = {EFFE8F19-2202-451C-8A71-31A930B2BFC3}
+		{D0E6C91A-36D8-45FF-A560-4326071DCEBD} = {CC7F683E-FCB5-4898-B630-D1E64B54F878}
+		{DE7E5681-5DBD-46BE-BAB3-E3DBD59760D1} = {DAAF65CE-7CBA-40EC-9647-F8989DA905C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {162AF330-297F-4201-B976-E9CDB7733CD2}

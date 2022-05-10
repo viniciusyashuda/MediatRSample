@@ -6,7 +6,7 @@ using MediatR;
 using MediatRSample.Application.Commands;
 using MediatRSample.Application.Models;
 using MediatRSample.Application.Notification;
-using MediatRSample.Repositories;
+using MediatRSample.Domain.Application.Interfaces;
 
 namespace MediatRSample.Application.Handlers
 {

@@ -1,8 +1,6 @@
-using System.Linq;
 using System.Threading.Tasks;
 using MediatRSample.Application.Models;
-using MediatRSample.Repositories;
-using PersonTest.Generate;
+using PersonTest.Mocks;
 using Xunit;
 
 namespace PersonTest
@@ -12,8 +10,8 @@ namespace PersonTest
         [Fact]
         public async Task GetAllTest()
         {
-            await PersonMockGenerate.GeneratePersonAsync();
-            var people = await PersonMockGenerate.GetAllPeopleAsync();
+            await PersonMockPost.GeneratePersonAsync();
+            var people = await PersonMockGet.GetAllPeopleAsync();
             var status = false;
             if (people.Count > 0)
                 status = true;
@@ -24,8 +22,8 @@ namespace PersonTest
         [Fact]
         public async Task GetTest()
         {
-            await PersonMockGenerate.GeneratePersonAsync();
-            var person = await PersonMockGenerate.GetPersonAsync(1);
+            await PersonMockPost.GeneratePersonAsync();
+            var person = await PersonMockGet.GetPersonAsync(1);
             if (person == null)
                 person = new Person();
 
@@ -35,8 +33,8 @@ namespace PersonTest
         [Fact]
         public async Task PostTest()
         {
-            await PersonMockGenerate.GeneratePersonAsync();
-            var personAdded = await PersonMockGenerate.GetPersonAsync(1);
+            await PersonMockPost.GeneratePersonAsync();
+            var personAdded = await PersonMockGet.GetPersonAsync(1);
 
             Assert.NotNull(personAdded);
         }
@@ -44,8 +42,8 @@ namespace PersonTest
         [Fact]
         public async Task EditTest()
         {
-            await PersonMockGenerate.EditPersonAsync();
-            var personEdited = await PersonMockGenerate.GetPersonAsync(1);
+            await PersonMockPut.EditPersonAsync();
+            var personEdited = await PersonMockGet.GetPersonAsync(1);
 
             Assert.Equal("vinicius", personEdited.Name);
         }
@@ -53,9 +51,9 @@ namespace PersonTest
         [Fact]
         public async Task DeleteTest()
         {
-            await PersonMockGenerate.GeneratePersonAsync();
-            await PersonMockGenerate.DeletePersonAsync(1);
-            var personToDelete = await PersonMockGenerate.GetPersonAsync(1);
+            await PersonMockPost.GeneratePersonAsync();
+            await PersonMockDelete.DeletePersonAsync(1);
+            var personToDelete = await PersonMockGet.GetPersonAsync(1);
 
             Assert.Null(personToDelete);
         }

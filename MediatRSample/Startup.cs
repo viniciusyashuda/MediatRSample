@@ -1,6 +1,8 @@
+using System;
 using MediatR;
 using MediatRSample.Application.Models;
-using MediatRSample.Repositories;
+using MediatRSample.Domain.Application.Interfaces;
+using MediatRSample.Infraestructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,7 +29,7 @@ namespace MediatRSample
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MediatRSample", Version = "v1" });
             });
-            services.AddMediatR(typeof(Startup));
+            services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
             services.AddSingleton<IRepository<Person>, Repository>();
         }
 

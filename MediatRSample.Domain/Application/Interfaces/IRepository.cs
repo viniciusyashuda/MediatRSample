@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MediatRSample.Repositories
+namespace MediatRSample.Domain.Application.Interfaces
 {
     public interface IRepository<T>
     {

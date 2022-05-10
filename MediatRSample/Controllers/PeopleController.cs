@@ -2,7 +2,7 @@
 using MediatR;
 using MediatRSample.Application.Commands;
 using MediatRSample.Application.Models;
-using MediatRSample.Repositories;
+using MediatRSample.Domain.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MediatRSample.Controllers

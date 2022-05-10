@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MediatRSample.Domain\MediatRSample.Domain.csproj" />
+    <ProjectReference Include="..\MediatRSample.Infrestructure\MediatRSample.Infraestructure.csproj" />
+  </ItemGroup>
+
 </Project>
